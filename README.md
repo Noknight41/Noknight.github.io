@@ -31,6 +31,8 @@ Static Web so với Dynamic Web, cả hai đều có ưu và nhược điểm:
 
 Quay lại vấn đề  của chúng ta, homepage cá nhân của chúng ta chỉ cần ở mức độ đơn giản, công sức cho nên dùng web tĩnh phù hợp hơn, như một MVP nhằm tìm kiếm xem có tập khách hàng hứng thú với mình. Ở đây, mình sử  dụng Hugo vì sự đa dạng trong số  lượng template Hugo cung cấp, khiến quy trình xây dựng trở nên nhanh hơn nữa
 
+Link homepage: [https://noknight41.github.io/](https://noknight41.github.io/)
+
 ## Assignment 2: Design System
 
 ### Problem statement 2
@@ -45,6 +47,10 @@ Vấn đề  ở đây là gì ? Nếu như trang web với 10000 user truy cậ
 - Nguyên nhân là khi có nhiều người như vậy truy cập như vậy, website sẽ yêu cầu server nhiều tác vụ, bao gồm tác vụ truy cập database để  lấy nội dung bài blog, yêu cầu đến truy cập trang web con, yêu cầu business logic khác, ...
 - Nếu không đủ số  lượng server, server không đủ lớn, hiện tượng trên là một vấn đề  thường xuyên
 - Bên cạnh đó, một số vần đề khác như khoảng cách địa lý: Mình đặt server ở Việt Nam, vậy user của mình ở Mỹ sẽ gặp khó khăn trong việc load trang web và tài nguyên của mình.
+
+### Solution
+
+Link blog: [https://noknight41.github.io/post/sysdes/](https://noknight41.github.io/post/sysdes/)
 
 ## Tham khảo
 
