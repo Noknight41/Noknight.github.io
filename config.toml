@@ -1,4 +1,4 @@
-baseurl = "https://username.github.io"
+baseurl = "https://Noknight41.github.io"
 DefaultContentLanguage = "en"
 title = "My Way"
 theme = "beautifulhugo"
@@ -7,6 +7,7 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
+publishDir = "docs"
 
 [Params]
   homeTitle = "Blog with Me" # Set a different text for the header on the home page
@@ -84,3 +85,5 @@ pygmentsCodefencesGuessSyntax = true
     name = "Tags"
     url = "tags"
     weight = 3
+
+

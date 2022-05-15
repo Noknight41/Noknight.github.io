@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>A little rant about System Design - My Way</title>
+  <meta name="description" content="A little blogs website for a not-so little customer base ?">
+  <meta name="author" content="NPT"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "My Way",
+    
+    "url": "https:\/\/Noknight41.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/Noknight41.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/Noknight41.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/Noknight41.github.io\/post\/sysdes\/",
+          "name": "A little rant about system design"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "NPT"
+  },
+  "headline": "A little rant about System Design",
+  "description" : "Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?\n",
+  "inLanguage" : "en",
+  "wordCount":  1468 ,
+  "datePublished" : "2022-05-11T16:34:49",
+  "dateModified" : "2022-05-11T16:34:49",
+  "image" : "https:\/\/Noknight41.github.io\/img\/ava.jpg",
+  "keywords" : [ "example, VNG, Think-different" ],
+  "mainEntityOfPage" : "https:\/\/Noknight41.github.io\/post\/sysdes\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/Noknight41.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/Noknight41.github.io\/img\/ava.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="A little rant about System Design" />
+<meta property="og:description" content="A little blogs website for a not-so little customer base ?">
+<meta property="og:image" content="https://Noknight41.github.io/img/ava.jpg" />
+<meta property="og:url" content="https://Noknight41.github.io/post/sysdes/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Way" />
+
+  <meta name="twitter:title" content="A little rant about System Design" />
+  <meta name="twitter:description" content="A little blogs website for a not-so little customer base ?">
+  <meta name="twitter:image" content="https://Noknight41.github.io/img/ava.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://Noknight41.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="alternate" href="https://Noknight41.github.io/index.xml" type="application/rss+xml" title="My Way"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://Noknight41.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://Noknight41.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://Noknight41.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://Noknight41.github.io">My Way</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Personal Favorite</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/philosophy/">Philosophy Talk ?</a>
+                
+                  <a href="/post/bd/">Binh Dinh&#39;s Dream</a>
+                
+                  <a href="/post/binsearch/">Binary Search</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="My Way" href="https://Noknight41.github.io">
+            <img class="avatar-img" src="https://Noknight41.github.io/img/ava.jpg" alt="My Way" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>A little rant about System Design</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">A little blogs website for a not-so little customer base ?</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 11, 2022
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1468&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;NPT
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?</p>
+<p>Giả sử  chút xíu thôi, một cái giả sử  hơi nhỏ xíu, trang blog của bạn được truy cập bởi một số lượng user rất lớn, lên đến 10000 user trong thời gian cao điểm. Đề xuất thiết kế  cơ sở hạ tầng của hệ thống cho trang blog giải quyết được vấn đề  này.</p>
+<h3 id="problem-analysis">Problem Analysis</h3>
+<p>Vấn đề  ở đây là gì ? Nếu như trang web với 10000 user truy cập cùng lúc, chuyện gì sẽ xảy ra?</p>
+<ul>
+<li>Vấn đề  đầu tiên sẽ gặp phải sẽ là trang web sẽ load chậm, tương tác có độ trễ  lớn hay tệ hơn là crash hoàn toàn trang web.</li>
+<li>Nguyên nhân là khi có nhiều người như vậy truy cập như vậy, website sẽ yêu cầu server nhiều tác vụ, bao gồm tác vụ truy cập database để  lấy nội dung bài blog, yêu cầu đến truy cập trang web con, yêu cầu business logic khác, &hellip;</li>
+<li>Nếu không đủ số  lượng server, server không đủ lớn, hiện tượng trên là một vấn đề  thường xuyên</li>
+<li>Bên cạnh đó, một số vần đề khác như khoảng cách địa lý: Mình đặt server ở Việt Nam, vậy user của mình ở Mỹ sẽ gặp khó khăn trong việc load trang web và tài nguyên của mình.</li>
+</ul>
+<h3 id="vertical-scaling">Vertical Scaling</h3>
+<p>Ta đã xác định nguyên nhân của vấn đề  là sự thiếu hụt về lượng. Vậy ta cứ thêm lượng vào vấn đề là mọi chuyện sẽ ok phải không ? Lượng thiếu hụt chỗ nào, thêm vào chỗ  đó. Ít server ? Tăng lượng server ? Server yếu ? Gắn bộ nhớ, thêm nhân cho bộ xử lý, thay ổ đĩa từ HDD sang SSD. Một cách đơn giản, ta cho Server scale theo số lượng user.</p>
+<p>Tất nhiên, đây là một giải pháp hoàn toàn hợp lý, được gọi là Vertical Scaling (Scale theo chiều dọc - liên tưởng đến xếp nhiều server thành từng chồng).</p>
+<ul>
+<li>Không cần thay đổi quá nhiêu về kiến trúc trang web</li>
+<li>Đơn giản mà hiệu quả</li>
+</ul>
+<p>Tuy nhiên, khi ta đưa giải pháp này ra, ta sẽ gặp <strong>1 vài</strong> điểm bất hợp lý:</p>
+<ul>
+<li>Tiền - Nguồn cơ của mọi tội ác =)</li>
+<li>Tồn tại giới hạn mà ta có thể nâng cấp server lên phiên bản state-of-the-art hiện tại</li>
+<li>Không thể hiện được kiến thức của ta về thiết kế hệ thống</li>
+</ul>
+<p>Vì vậy, trong bài tập thiết kế hệ thống, ta sẽ tập trung bàn về  Horizontal Scaling (Scale theo chiều ngang - liên tưởng đến dàn trải, chia nhỏ workload cho nhiều server)</p>
+<p>Tuy nhiên, ta cũng phải nhấn mạnh rằng, Horizontal Scaling cần đi chung Vertical Scaling và cũng cần liên tục cân nhắc khi đối mặt với vần đề này.</p>
+<h3 id="horizontal-scaling">Horizontal Scaling</h3>
+<h4 id="giai-đoạn-1-humble-beginning">Giai đoạn 1 (Humble Beginning)</h4>
+<p>Tiếp cận vấn đề này Horizontal Scaling, chúng ta nên đi từ cấu trúc đơn giản đi lên. Dưới đây là 1 kiến trúc đơn giản của trang web của mình.</p>
+<p><img src="/img/1.png" alt="Image_1"></p>
+<h4 id="giai-đoạn-2-database-partition">Giai đoạn 2 (Database Partition)</h4>
+<p>Bắt đầu từ đây, trước khi ta nâng cấp số lượng server lên nhiều server, ta nhận thấy sử dụng 1 database cho toàn bộ có thể tạo ra bottleneck cho toàn bộ hệ thống, tương tự như 1 server của chúng ta.</p>
+<p>Chính vì vậy, ta chia database thành 2 thành phần như hình dưới: MySQL database lưu trữ thông tin update liên tục như user, comment, tag, &hellip;, trong khi Object Store lưu trữ các thông tin không update thường xuyên như, file CSS, JS, Video, hình ảnh, &hellip; Điều này còn giúp tăng khả năng Vertical Scaling của database của chúng ta.</p>
+<p><img src="/img/2.png" alt="Image_2"></p>
+<h4 id="giai-đoạn-3-load-balancing">Giai đoạn 3 (Load Balancing)</h4>
+<p>Trang web ta phổ biến hơn, lượng user truy cập nhiều hơn và hệ thống ta phải tiếp tục thực hiện Vertical Scaling thêm. Thay vì 1 server, ta thêm nhiều server để đảm bảo luôn đủ server cho thời gian đông đúc. Nhưng 1 vấn đề khác lại xảy ra, DNS thay vì chọn server đang không có load quá nhiều của chúng ta, lại chọn đúng cái server đang nhận khác nhiều công việc, dẫn đến không sử dụng hết công suất của server hiện có. Đây là lúc ta cần đến Load Balancing.</p>
+<p>Load Balacer là một thành phần quan trọng của cơ sở hạ tầng mạng, thường được sử dụng để cải thiện hiệu suất cũng như độ tin cậy của các trang web, giúp máy chủ ảo hoạt động đồng bộ và hiệu quả hơn thông qua việc phân phối đồng đều tài nguyên.</p>
+<p>Bên cạnh đó, bằng cách sử dụng Load Balancer, những yêu cầu từ người dùng sẽ được tiếp nhận và xử lý trước khi được phân chia đến các máy chủ. Đồng thời, trong quá trình phản hồi , những thông tin đó cũng được xét duyệt thông qua Load Balancer, giúp ngăn cản việc người dùng giao tiếp trực tiếp với máy chủ, tránh được các cuộc tấn công như DDoS.</p>
+<p><img src="/img/3.2.png" alt="Image_3"></p>
+<h4 id="giai-đoạn-4-database-replication">Giai đoạn 4 (Database Replication)</h4>
+<p>Trang web của chúng ta đã trên con đường bền vững giữa Horizontal Scaling và Vertical Scaling. Tuy nhiên, bottleneck của chúng ta lại quay về  cái database, đặc biệt là MySQL database. Với trang web chúng ta phát triển, chúng ta cần ưu tiên về redundacy và avaiability.Chính vì thể ta cần nhiều database hơn và một phương pháp được áp dụng để giải quyết vấn đề trên là Database Replication, cụ thể là Master-Slave Replication.</p>
+<p>Ý tưởng Master-Slave Replication là, có một database server làm database chính (Master), tất cả request đọc/ghi đều thực hiện trên server này. Ngoài ra, các datbase server phụ (Slave) chỉ đảm nhiệm đọc dữ liệu mà thôi.</p>
+<p>Trên thực tế, trang web blogs của chúng ta có nhiều yêu cầu READ nhiều hơn WRITE nên áp dụng pattern này là hợp lý. Một số ưu điểm mà ta có được là:</p>
+<ul>
+<li>Truy vấn đọc được xử lý tốt hơn</li>
+<li>Tránh được thiếu thống nhất về data so với áp dụng pattern Multi-Master</li>
+<li>Có khả năng phục hồi dữ liệu nếu database Master bị sự cố</li>
+</ul>
+<p>Bên cạnh đó, ta có thể thêm các SQL Read Replica để giảm load truy cập vào Master.</p>
+<p><img src="/img/3.3.png" alt="Image_4"></p>
+<h4 id="giai-đoạn-5-application-layer--cache--cdn">Giai đoạn 5 (Application Layer + Cache + CDN)</h4>
+<p>Ở đây ta có thể thấy sự phân chia giữa Web server và các API gọi đến Database. Thực hiện phân chia Web Layer khỏi Application Layer (bao gồm các API) cho phép ta thực hiện Scale và cấu hình cả hai lớp một cách độc lập.</p>
+<p>Chúng ta đã đi khá xa rồi mà chưa nhắc đến khái niệm caching. Nếu 1 process để load 1 trang web mà user đã gọi trước của chúng ta bao gồm:</p>
+<ul>
+<li>User gọi đến Load Balancer xin trả về trang web đó</li>
+<li>Load balancer kiểm tra yêu cầu, routing đến 1 server đang trống</li>
+<li>Server gọi API đến database chứa dữ liệu đó</li>
+<li>Server truy xuất từ nhiều database khác để lấy về đầy đủ trang web yêu cầu</li>
+<li>Server trả về cho user trang web đó</li>
+</ul>
+<p>Thay vào đó, sao ta không lưu trang web đó một bộ nhớ đệm, truy xuất bộ nhớ đệm nếu chứa trang web đó và trả về. Thật đơn giản mà hiệu quả</p>
+<p>Về vấn đề khoảng cách địa lý nêu đầu bài, bên cạnh dàn trải lượng lớn server hiện có ra khắp nơi, tăng tính availbility lên, ta có thể áp dụng công nghệ CDN. CDN hoạt động giống như cache, nhưng CDN được đặt ở nhiều nơi, tăng tính availablity về mặt địa lý.</p>
+<p>CDN lấy nội dung mới từ máy chủ của bạn khi người dùng đầu tiên yêu cầu nội dung. Bạn để nội dung trên máy chủ của mình và viết lại các URL để trỏ đến CDN. Điều này dẫn đến yêu cầu chậm hơn cho đến khi nội dung được lưu vào bộ nhớ cache trên CDN. Các trang web có lưu lượng truy cập lớn hoạt động tốt với các CDN, vì lưu lượng truy cập được trải đều hơn và chỉ còn lại nội dung được yêu cầu gần đây trên CDN.</p>
+<p><img src="/img/4.3.png" alt="Image_5"></p>
+<h3 id="kết-luận">Kết luận</h3>
+<p>Như vậy, vừa rồi là phân trình bày của mình về ý tưởng thiết kế 1 trang web blogs và scale lên cho số lượng user khổng lồ dựa trên kiến thức mình thu thập từ</p>
+<p>Tất nhiên, scaling và optimizing là một quá trình lặp đi lặp lại không ngừng và việc tìm tòi về lĩnh vực này cũng vậy</p>
+<h2 id="tham-khảo">Tham khảo</h2>
+<ul>
+<li><a href="https://github.com/donnemartin/system-design-primer#master-slave-replication">System Design Primer</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer#load-balancer">Vertical Scaling vs Horizontal Scaling</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Partition_(database)">Database Partioning</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer#replication">Database Replication</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer#application-layer">Application Layer</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer#cache">Caching</a></li>
+<li><a href="https://www.creative-artworks.eu/why-use-a-content-delivery-network-cdn/">CDN</a></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://Noknight41.github.io/tags/example/">example</a>&nbsp;
+            
+              <a href="https://Noknight41.github.io/tags/vng/">VNG</a>&nbsp;
+            
+              <a href="https://Noknight41.github.io/tags/think-different/">Think-different</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f&amp;text=A%20little%20rant%20about%20System%20Design&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f&amp;title=A%20little%20rant%20about%20System%20Design" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f&amp;title=A%20little%20rant%20about%20System%20Design" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f&amp;title=A%20little%20rant%20about%20System%20Design" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fNoknight41.github.io%2fpost%2fsysdes%2f&amp;description=A%20little%20rant%20about%20System%20Design" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/binsearch/">Binary Search - Simple, but Genius</a></li>
+                
+                    <li><a href="/post/bd/">That one time I got isekai-ed to Binh Dinh Province</a></li>
+                
+                    <li><a href="/post/philosophy/">Philosophy</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://Noknight41.github.io/post/binsearch/" data-toggle="tooltip" data-placement="top" title="Binary Search - Simple, but Genius">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:npthinh26012@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/Justince%20Nguyen" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Noknight41" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://itch.io/profile/username" title="Itch.io">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              NPT
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2022
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://Noknight41.github.io">My Way</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.80.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://Noknight41.github.io/js/main.js"></script>
+<script src="https://Noknight41.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://Noknight41.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

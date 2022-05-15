@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My Way</title>
+    <link>https://Noknight41.github.io/post/</link>
+    <description>Recent content in Posts on My Way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>npthinh26012@gmail.com (NPT)</managingEditor>
+    <webMaster>npthinh26012@gmail.com (NPT)</webMaster>
+    <lastBuildDate>Wed, 11 May 2022 16:34:49 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A little rant about System Design</title>
+      <link>https://Noknight41.github.io/post/sysdes/</link>
+      <pubDate>Wed, 11 May 2022 16:34:49 +0700</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/post/sysdes/</guid>
+      <description>&lt;p&gt;Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Binary Search - Simple, but Genius</title>
+      <link>https://Noknight41.github.io/post/binsearch/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/post/binsearch/</guid>
+      <description>&lt;p&gt;Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you&amp;rsquo;ve narrowed down the possible locations to just one.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>That one time I got isekai-ed to Binh Dinh Province</title>
+      <link>https://Noknight41.github.io/post/bd/</link>
+      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/post/bd/</guid>
+      <description>&lt;p&gt;Like countless isekai tales before it, this series has me die to Truck-kun in the beginning. There’s a twist, though: I  get isekai’d to Binh Dinh Province.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>https://Noknight41.github.io/post/philosophy/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/post/philosophy/</guid>
+      <description>Triết học đánh dấu sự khác nhau của tư duy sinh viên và tư duy học sinh. Đánh dấu một sự trưởng thành ra gì và này nọ của bạn so với việc không học triết.
+Triết học sẽ giúp bạn làm việc hiệu quả và thông minh hơn. Mình nói như vậy bởi vì:
+Trong tiếng Anh, triết học được gọi là Philosophy. Nguồn gốc của từ này xuất phát từ hai từ “philo” và “sophia”.</description>
+    </item>
+    
+    <item>
+      <title>First post!</title>
+      <link>https://Noknight41.github.io/post/first-post/</link>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/post/first-post/</guid>
+      <description>This is my first post, how exciting!</description>
+    </item>
+    
+  </channel>
+</rss>
