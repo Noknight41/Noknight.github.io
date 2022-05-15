@@ -139,9 +139,9 @@ CDN lấy nội dung mới từ máy chủ của bạn khi người dùng đầu
 
 ### Kết luận
 
-Như vậy, vừa rồi là phân trình bày của mình về ý tưởng thiết kế 1 trang web blogs và scale lên cho số lượng user khổng lồ dựa trên kiến thức mình thu thập từ 
+Như vậy, vừa rồi là phân trình bày của mình về ý tưởng thiết kế 1 trang web blogs và scale lên cho số lượng user khổng lồ dựa trên kiến thức mình tìm hiểu được.
 
-Tất nhiên, scaling và optimizing là một quá trình lặp đi lặp lại không ngừng và việc tìm tòi về lĩnh vực này cũng vậy
+Tất nhiên, scaling và optimizing là một quá trình lặp đi lặp lại không ngừng và việc tìm tòi về lĩnh vực này cũng vậy.
 
 ## Tham khảo
 
