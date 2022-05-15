@@ -5,14 +5,14 @@ comments: false
 ---
 
 Yeah, it's a bit corny but hey, why not ?
-My name is Nguyen Phuc Thinh. I have the following qualities:
+My name is Nguyen Phuc Thinh, I'm currently a third-year software engineering student in Ho Chi Minh University of Technology.
 
-- I have a bachelor's degree in Computer Science at HCMUT
-- I love exploring and exploiting new knowledge
-- I'm extremely loyal to my family
-- I'm a gamer 
+- I'm learning to get bachelor's degree in Computer Science at HCMUT
+- I love exploring and exploiting new knowledge, I do like reading book but never finish them.
+- I love learning Japanese and learning about Japan's Culture.
+- I grew up in very awesome and supportive family
 
-What else do you need?
+This month (05/2022), I have started my first position as a Software Development Fresher at ZaloPay - a leading Vietnamese e-wallet service - and I'm very happy to share this.
 
 ### My History
 
