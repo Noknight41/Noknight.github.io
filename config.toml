@@ -1,0 +1,86 @@
+baseurl = "https://username.github.io"
+DefaultContentLanguage = "en"
+title = "Coder's Way"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[Params]
+  homeTitle = "Blog with Me" # Set a different text for the header on the home page
+  subtitle = "Slow down and enjoy life"
+  mainSections = ["post","posts"]
+  logo = "img/ava.jpg" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+#  hideAuthor = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "NPT"
+  email = "npthinh26012@gmail.com"
+  facebook = "Justince Nguyen"
+  github = "Noknight41"
+  linkedin = "username"
+  itchio = "username"
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 3
+
+[[menu.main]]
+    identifier = "samples"
+    name = "Personal Favorite"
+    weight = 2
+
+[[menu.main]]
+    parent = "samples"
+    name = "Philosophy Talk ?"
+    url = "post/philosophy/"
+    weight = 1
+
+[[menu.main]]
+    parent = "samples"
+    name = "Binh Dinh's Dream"
+    url = "post/bd/"
+    weight = 2
+
+[[menu.main]]
+    parent = "samples"
+    name = "Binary Search"
+    url = "post/binsearch/"
+    weight = 3
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
