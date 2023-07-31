@@ -49,7 +49,7 @@ Tuy nhiên, ta cũng phải nhấn mạnh rằng, Horizontal Scaling cần đi c
 
 Tiếp cận vấn đề này Horizontal Scaling, chúng ta nên đi từ cấu trúc đơn giản đi lên. Dưới đây là 1 kiến trúc đơn giản của trang web của mình.
 
-![Image_1](/img/1.png)
+![Image_1](/img/sysdes/1.png)
 
 #### Giai đoạn 2 (Database Partition)
 
@@ -57,7 +57,7 @@ Bắt đầu từ đây, trước khi ta nâng cấp số lượng server lên n
 
 Chính vì vậy, ta chia database thành 2 thành phần như hình dưới: MySQL database lưu trữ thông tin update liên tục như user, comment, tag, ..., trong khi Object Store lưu trữ các thông tin không update thường xuyên như, file CSS, JS, Video, hình ảnh, ... Điều này còn giúp tăng khả năng Vertical Scaling của database của chúng ta. 
 
-![Image_2](/img/2.png)
+![Image_2](/img/sysdes/2.png)
 
 #### Giai đoạn 3 (Load Balancing)
 
@@ -67,7 +67,7 @@ Load Balacer là một thành phần quan trọng của cơ sở hạ tầng m�
 
 Bên cạnh đó, bằng cách sử dụng Load Balancer, những yêu cầu từ người dùng sẽ được tiếp nhận và xử lý trước khi được phân chia đến các máy chủ. Đồng thời, trong quá trình phản hồi , những thông tin đó cũng được xét duyệt thông qua Load Balancer, giúp ngăn cản việc người dùng giao tiếp trực tiếp với máy chủ, tránh được các cuộc tấn công như DDoS.
 
-![Image_3](/img/3.2.png)
+![Image_3](/img/sysdes/3.2.png)
 
 #### Giai đoạn 4 (Database Replication)
 
@@ -83,7 +83,7 @@ Trên thực tế, trang web blogs của chúng ta có nhiều yêu cầu READ n
 
 Bên cạnh đó, ta có thể thêm các SQL Read Replica để giảm load truy cập vào Master.
 
-![Image_4](/img/3.3.png)
+![Image_4](/img/sysdes/3.3.png)
 
 #### Giai đoạn 5 (Application Layer + Cache + CDN)
 
@@ -102,7 +102,7 @@ Về vấn đề khoảng cách địa lý nêu đầu bài, bên cạnh dàn tr
 
 CDN lấy nội dung mới từ máy chủ của bạn khi người dùng đầu tiên yêu cầu nội dung. Bạn để nội dung trên máy chủ của mình và viết lại các URL để trỏ đến CDN. Điều này dẫn đến yêu cầu chậm hơn cho đến khi nội dung được lưu vào bộ nhớ cache trên CDN. Các trang web có lưu lượng truy cập lớn hoạt động tốt với các CDN, vì lưu lượng truy cập được trải đều hơn và chỉ còn lại nội dung được yêu cầu gần đây trên CDN.
 
-![Image_5](/img/4.3.png)
+![Image_5](/img/sysdes/4.3.png)
 
 
 ### Kết luận

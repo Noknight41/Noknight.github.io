@@ -311,16 +311,16 @@
 <h3 id="horizontal-scaling">Horizontal Scaling</h3>
 <h4 id="giai-đoạn-1-humble-beginning">Giai đoạn 1 (Humble Beginning)</h4>
 <p>Tiếp cận vấn đề này Horizontal Scaling, chúng ta nên đi từ cấu trúc đơn giản đi lên. Dưới đây là 1 kiến trúc đơn giản của trang web của mình.</p>
-<p><img src="/img/1.png" alt="Image_1"></p>
+<p><img src="/img/sysdes/1.png" alt="Image_1"></p>
 <h4 id="giai-đoạn-2-database-partition">Giai đoạn 2 (Database Partition)</h4>
 <p>Bắt đầu từ đây, trước khi ta nâng cấp số lượng server lên nhiều server, ta nhận thấy sử dụng 1 database cho toàn bộ có thể tạo ra bottleneck cho toàn bộ hệ thống, tương tự như 1 server của chúng ta.</p>
 <p>Chính vì vậy, ta chia database thành 2 thành phần như hình dưới: MySQL database lưu trữ thông tin update liên tục như user, comment, tag, &hellip;, trong khi Object Store lưu trữ các thông tin không update thường xuyên như, file CSS, JS, Video, hình ảnh, &hellip; Điều này còn giúp tăng khả năng Vertical Scaling của database của chúng ta.</p>
-<p><img src="/img/2.png" alt="Image_2"></p>
+<p><img src="/img/sysdes/2.png" alt="Image_2"></p>
 <h4 id="giai-đoạn-3-load-balancing">Giai đoạn 3 (Load Balancing)</h4>
 <p>Trang web ta phổ biến hơn, lượng user truy cập nhiều hơn và hệ thống ta phải tiếp tục thực hiện Vertical Scaling thêm. Thay vì 1 server, ta thêm nhiều server để đảm bảo luôn đủ server cho thời gian đông đúc. Nhưng 1 vấn đề khác lại xảy ra, DNS thay vì chọn server đang không có load quá nhiều của chúng ta, lại chọn đúng cái server đang nhận khác nhiều công việc, dẫn đến không sử dụng hết công suất của server hiện có. Đây là lúc ta cần đến Load Balancing.</p>
 <p>Load Balacer là một thành phần quan trọng của cơ sở hạ tầng mạng, thường được sử dụng để cải thiện hiệu suất cũng như độ tin cậy của các trang web, giúp máy chủ ảo hoạt động đồng bộ và hiệu quả hơn thông qua việc phân phối đồng đều tài nguyên.</p>
 <p>Bên cạnh đó, bằng cách sử dụng Load Balancer, những yêu cầu từ người dùng sẽ được tiếp nhận và xử lý trước khi được phân chia đến các máy chủ. Đồng thời, trong quá trình phản hồi , những thông tin đó cũng được xét duyệt thông qua Load Balancer, giúp ngăn cản việc người dùng giao tiếp trực tiếp với máy chủ, tránh được các cuộc tấn công như DDoS.</p>
-<p><img src="/img/3.2.png" alt="Image_3"></p>
+<p><img src="/img/sysdes/3.2.png" alt="Image_3"></p>
 <h4 id="giai-đoạn-4-database-replication">Giai đoạn 4 (Database Replication)</h4>
 <p>Trang web của chúng ta đã trên con đường bền vững giữa Horizontal Scaling và Vertical Scaling. Tuy nhiên, bottleneck của chúng ta lại quay về  cái database, đặc biệt là MySQL database. Với trang web chúng ta phát triển, chúng ta cần ưu tiên về redundacy và avaiability.Chính vì thể ta cần nhiều database hơn và một phương pháp được áp dụng để giải quyết vấn đề trên là Database Replication, cụ thể là Master-Slave Replication.</p>
 <p>Ý tưởng Master-Slave Replication là, có một database server làm database chính (Master), tất cả request đọc/ghi đều thực hiện trên server này. Ngoài ra, các datbase server phụ (Slave) chỉ đảm nhiệm đọc dữ liệu mà thôi.</p>
@@ -331,7 +331,7 @@
 <li>Có khả năng phục hồi dữ liệu nếu database Master bị sự cố</li>
 </ul>
 <p>Bên cạnh đó, ta có thể thêm các SQL Read Replica để giảm load truy cập vào Master.</p>
-<p><img src="/img/3.3.png" alt="Image_4"></p>
+<p><img src="/img/sysdes/3.3.png" alt="Image_4"></p>
 <h4 id="giai-đoạn-5-application-layer--cache--cdn">Giai đoạn 5 (Application Layer + Cache + CDN)</h4>
 <p>Ở đây ta có thể thấy sự phân chia giữa Web server và các API gọi đến Database. Thực hiện phân chia Web Layer khỏi Application Layer (bao gồm các API) cho phép ta thực hiện Scale và cấu hình cả hai lớp một cách độc lập.</p>
 <p>Chúng ta đã đi khá xa rồi mà chưa nhắc đến khái niệm caching. Nếu 1 process để load 1 trang web mà user đã gọi trước của chúng ta bao gồm:</p>
@@ -345,7 +345,7 @@
 <p>Thay vào đó, sao ta không lưu trang web đó một bộ nhớ đệm, truy xuất bộ nhớ đệm nếu chứa trang web đó và trả về. Thật đơn giản mà hiệu quả</p>
 <p>Về vấn đề khoảng cách địa lý nêu đầu bài, bên cạnh dàn trải lượng lớn server hiện có ra khắp nơi, tăng tính availbility lên, ta có thể áp dụng công nghệ CDN. CDN hoạt động giống như cache, nhưng CDN được đặt ở nhiều nơi, tăng tính availablity về mặt địa lý.</p>
 <p>CDN lấy nội dung mới từ máy chủ của bạn khi người dùng đầu tiên yêu cầu nội dung. Bạn để nội dung trên máy chủ của mình và viết lại các URL để trỏ đến CDN. Điều này dẫn đến yêu cầu chậm hơn cho đến khi nội dung được lưu vào bộ nhớ cache trên CDN. Các trang web có lưu lượng truy cập lớn hoạt động tốt với các CDN, vì lưu lượng truy cập được trải đều hơn và chỉ còn lại nội dung được yêu cầu gần đây trên CDN.</p>
-<p><img src="/img/4.3.png" alt="Image_5"></p>
+<p><img src="/img/sysdes/4.3.png" alt="Image_5"></p>
 <h3 id="kết-luận">Kết luận</h3>
 <p>Như vậy, vừa rồi là phân trình bày của mình về ý tưởng thiết kế 1 trang web blogs và scale lên cho số lượng user khổng lồ dựa trên kiến thức mình thu thập từ</p>
 <p>Tất nhiên, scaling và optimizing là một quá trình lặp đi lặp lại không ngừng và việc tìm tòi về lĩnh vực này cũng vậy</p>
