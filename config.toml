@@ -49,11 +49,6 @@ publishDir = "docs"
   itchio = "username"
 
 [[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
-
-[[menu.main]]
     name = "About"
     url = "page/about/"
     weight = 3
@@ -65,22 +60,16 @@ publishDir = "docs"
 
 [[menu.main]]
     parent = "samples"
-    name = "Philosophy Talk ?"
-    url = "post/philosophy/"
+    name = "System Design"
+    url = "post/sysdes/"
     weight = 1
 
 [[menu.main]]
     parent = "samples"
-    name = "Binh Dinh's Dream"
-    url = "post/bd/"
-    weight = 2
-
-[[menu.main]]
-    parent = "samples"
-    name = "Binary Search"
-    url = "post/binsearch/"
-    weight = 3
-
+    name = "Hugo - Part 1"
+    url = "post/start-with-hugo/"
+    weight = 1
+  
 [[menu.main]]
     name = "Tags"
     url = "tags"

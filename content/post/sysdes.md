@@ -1,15 +1,15 @@
 ---
-title: "A little rant about System Design"
-subtitle: A little blogs website for a not-so little customer base ?
+title: Starter to System Design
+subtitle: How to build a blog website for a not-so little customer base ?
 date: 2022-05-11T16:34:49+07:00
-tags: ["VNG Fresher", "Think-different", "VN"]
+tags: ["VNG Fresher", "VN"]
 ---
 
 Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?
 
 <!--more-->
 
-Giả sử  chút xíu thôi, một cái giả sử  hơi nhỏ xíu, trang blog của bạn được truy cập bởi một số lượng user rất lớn, lên đến 10000 user trong thời gian cao điểm. Đề xuất thiết kế  cơ sở hạ tầng của hệ thống cho trang blog giải quyết được vấn đề  này.
+Giả sử  chút xíu thôi, một cái giả sử  hơi nhỏ xíu, trang blog của bạn được truy cập bởi một số lượng user rất lớn, lên đến 10000 user trong thời gian cao điểm. Đề xuất thiết kế cơ sở hạ tầng của hệ thống cho trang blog giải quyết được vấn đề  này.
 
 ### Problem Analysis
 
