@@ -1,97 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://Noknight41.github.io/post/sysdes/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/example/</loc>
+  </url><url>
+    <loc>https://Noknight41.github.io/post/first-post/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/post/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/tags/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/tags/think-different/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/vng/</loc>
+  </url><url>
+    <loc>https://Noknight41.github.io/tags/vn/</loc>
     <lastmod>2022-05-11T16:34:49+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/post/binsearch/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/code/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/entertainment/</loc>
-    <lastmod>2015-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/series/</loc>
-    <lastmod>2015-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/post/bd/</loc>
-    <lastmod>2015-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/educational/</loc>
-    <lastmod>2015-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/tags/one-shot/</loc>
-    <lastmod>2015-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/post/philosophy/</loc>
-    <lastmod>2015-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Noknight41.github.io/post/first-post/</loc>
-    <lastmod>2015-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://Noknight41.github.io/tags/vng-fresher/</loc>
+    <lastmod>2022-05-11T16:34:49+07:00</lastmod>
+  </url><url>
     <loc>https://Noknight41.github.io/page/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Noknight41.github.io/page/</loc>
   </url>
-  
 </urlset>
