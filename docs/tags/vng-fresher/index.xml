@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My Way</title>
-    <link>https://Noknight41.github.io/post/</link>
-    <description>Recent content in Posts on My Way</description>
+    <title>VNG Fresher on My Way</title>
+    <link>https://Noknight41.github.io/tags/vng-fresher/</link>
+    <description>Recent content in VNG Fresher on My Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>npthinh26012@gmail.com (NPT)</managingEditor>
     <webMaster>npthinh26012@gmail.com (NPT)</webMaster>
-    <lastBuildDate>Wed, 11 May 2022 16:34:49 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 16:34:49 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/vng-fresher/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A little rant about System Design</title>
       <link>https://Noknight41.github.io/post/sysdes/</link>
@@ -16,15 +16,6 @@
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/post/sysdes/</guid>
       <description>&lt;p&gt;Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>First post!</title>
-      <link>https://Noknight41.github.io/post/first-post/</link>
-      <pubDate>Wed, 11 May 2022 16:34:49 +0700</pubDate>
-      <author>npthinh26012@gmail.com (NPT)</author>
-      <guid>https://Noknight41.github.io/post/first-post/</guid>
-      <description>This is my first post, how exciting!</description>
     </item>
     
   </channel>
