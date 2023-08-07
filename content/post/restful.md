@@ -3,7 +3,6 @@ title: Make REST API more RESTful
 subtitle: A Handbook for Building RESTful API
 date: 2023-08-01T09:46:45+07:00
 tags: ["Blog", "REST-API", "EN"]
-draft: true
 ---
 
 In the world of web applications, REST APIs are bridges that connect different software and devices, allowing them to work together. In this beginner-friendly handbook, we'll explore the best practices for designing RESTful APIs, making it easier for you to create powerful and user-friendly applications.
@@ -202,15 +201,11 @@ For more in-depth information and additional best practices on API security, I r
 
 Though I'm not sure of the original author, this statement holds a great deal of truth. The faster the API consumers can understand the documentation, the faster they can use the API. If an API lacks proper documentation, it becomes challenging to use correctly, rendering it practically useless.
 
-Although writing documentation is not the favorite for developers, it is an essential aspect, particularly for APIs. The documentation helps make developers' lives a lot easier, too.
-
-Like many fields in Computer Science, there's also some sort of standard for documenting API's called [OpenAPI Specificatio](https://swagger.io/specification/), which are widely adopted.
+Although writing documentation is not the favorite for developers, it is an essential aspect, particularly for APIs. The documentation helps make developers' lives a lot easier, too. Like many fields in Computer Science, there's also some sort of standard for documenting API's called [OpenAPI Specificatio](https://swagger.io/specification/), which are widely adopted.
 
 ## Conclusion
 
-Designing a RESTful API requires careful consideration of various aspects to ensure it meets the demands of modern applications. 
-By following these best practices, you can create an API that is efficient, scalable, and user-friendly.
-Remember to document your API thoroughly to provide developers with clear guidelines on how to interact with your system effectively.
-Implementing these best practices will lead to a well-designed API that fosters a positive developer experience and drives the success of your application.
+Creating a user-friendly RESTful API requires careful planning to make sure it works well with modern applications. 
+By following these helpful tips, you can design an API that runs efficiently, can handle more users, and is easy for developers to use. As technology changes, make sure to keep up with the latest ideas and add them to your API to keep it useful and up-to-date.
 
 Happy coding !
