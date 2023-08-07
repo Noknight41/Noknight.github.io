@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>REST-API on My Way</title>
+    <title>rest-api on My Way</title>
     <link>https://Noknight41.github.io/tags/rest-api/</link>
-    <description>Recent content in REST-API on My Way</description>
+    <description>Recent content in rest-api on My Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>npthinh26012@gmail.com (NPT)</managingEditor>
     <webMaster>npthinh26012@gmail.com (NPT)</webMaster>
-    <lastBuildDate>Tue, 01 Aug 2023 09:46:45 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Aug 2023 09:46:45 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Make REST API more RESTful</title>
       <link>https://Noknight41.github.io/post/restful/</link>
-      <pubDate>Tue, 01 Aug 2023 09:46:45 +0700</pubDate>
+      <pubDate>Mon, 07 Aug 2023 09:46:45 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/post/restful/</guid>
       <description>&lt;p&gt;In the world of web applications, REST APIs are bridges that connect different software and devices, allowing them to work together. In this beginner-friendly handbook, we&amp;rsquo;ll explore the best practices for designing RESTful APIs, making it easier for you to create powerful and user-friendly applications.&lt;/p&gt;</description>

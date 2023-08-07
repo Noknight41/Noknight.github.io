@@ -8,11 +8,11 @@
     <language>en</language>
     <managingEditor>npthinh26012@gmail.com (NPT)</managingEditor>
     <webMaster>npthinh26012@gmail.com (NPT)</webMaster>
-    <lastBuildDate>Tue, 01 Aug 2023 09:46:45 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Aug 2023 09:46:45 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog</title>
+      <title>blog</title>
       <link>https://Noknight41.github.io/tags/blog/</link>
-      <pubDate>Tue, 01 Aug 2023 09:46:45 +0700</pubDate>
+      <pubDate>Mon, 07 Aug 2023 09:46:45 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/tags/blog/</guid>
       <description></description>
@@ -21,27 +21,45 @@
     <item>
       <title>EN</title>
       <link>https://Noknight41.github.io/tags/en/</link>
-      <pubDate>Tue, 01 Aug 2023 09:46:45 +0700</pubDate>
+      <pubDate>Mon, 07 Aug 2023 09:46:45 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/tags/en/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>REST-API</title>
+      <title>rest-api</title>
       <link>https://Noknight41.github.io/tags/rest-api/</link>
-      <pubDate>Tue, 01 Aug 2023 09:46:45 +0700</pubDate>
+      <pubDate>Mon, 07 Aug 2023 09:46:45 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/tags/rest-api/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>software-development</title>
+      <link>https://Noknight41.github.io/tags/software-development/</link>
+      <pubDate>Mon, 07 Aug 2023 09:46:45 +0700</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
       <link>https://Noknight41.github.io/tags/hugo/</link>
       <pubDate>Mon, 31 Jul 2023 10:46:37 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>non-CS</title>
+      <link>https://Noknight41.github.io/tags/non-cs/</link>
+      <pubDate>Mon, 31 Jul 2023 10:46:37 +0700</pubDate>
+      <author>npthinh26012@gmail.com (NPT)</author>
+      <guid>https://Noknight41.github.io/tags/non-cs/</guid>
       <description></description>
     </item>
     

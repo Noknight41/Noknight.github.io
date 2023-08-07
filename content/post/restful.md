@@ -1,8 +1,8 @@
 ---
 title: Make REST API more RESTful
 subtitle: A Handbook for Building RESTful API
-date: 2023-08-01T09:46:45+07:00
-tags: ["Blog", "REST-API", "EN"]
+date: 2023-08-07T09:46:45+07:00
+tags: ["software-development", "blog", "rest-api", "EN"]
 ---
 
 In the world of web applications, REST APIs are bridges that connect different software and devices, allowing them to work together. In this beginner-friendly handbook, we'll explore the best practices for designing RESTful APIs, making it easier for you to create powerful and user-friendly applications.

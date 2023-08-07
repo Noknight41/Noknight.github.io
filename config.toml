@@ -45,8 +45,6 @@ publishDir = "docs"
   email = "npthinh26012@gmail.com"
   facebook = "Justince Nguyen"
   github = "Noknight41"
-  linkedin = "username"
-  itchio = "username"
 
 [[menu.main]]
     name = "About"
@@ -68,6 +66,12 @@ publishDir = "docs"
     parent = "samples"
     name = "Hugo - Part 1"
     url = "post/start-with-hugo/"
+    weight = 1
+
+[[menu.main]]
+    parent = "samples"
+    name = "Design Rest API"
+    url = "post/restful/"
     weight = 1
   
 [[menu.main]]

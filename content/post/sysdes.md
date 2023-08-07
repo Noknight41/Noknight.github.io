@@ -2,7 +2,7 @@
 title: Starter to System Design
 subtitle: How to build a blog website for a not-so little customer base ?
 date: 2022-05-11T16:34:49+07:00
-tags: ["VNG-Fresher", "VN"]
+tags: ["VNG-Fresher", "VN", "software-development"]
 ---
 
 Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?

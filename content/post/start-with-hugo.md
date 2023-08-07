@@ -2,7 +2,7 @@
 title: Making a Blog with Hugo - Part 1
 subtitle: Hugo is a great tool to start a blog quickly
 date: 2023-07-31T10:46:37+07:00
-tags: ["Blog", "Hugo", "EN"]
+tags: ["non-CS", "blog", "hugo", "EN"]
 ---
 
 In an era of social media dominance, where everyone vies for attention in a sea of updates and distractions, a personal homepage is like an oasis of authenticity. 
