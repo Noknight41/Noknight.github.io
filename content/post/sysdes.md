@@ -1,7 +1,7 @@
 ---
 title: Starter to System Design
 subtitle: How to build a blog website for a not-so little customer base ?
-date: 2022-05-11T16:34:49+07:00
+date: 2022-05-13T16:34:49+07:00
 tags: ["VNG-Fresher", "VN", "software-development"]
 ---
 
@@ -13,7 +13,7 @@ Giả sử  chút xíu thôi, một cái giả sử  hơi nhỏ xíu, trang blog
 
 ### Problem Analysis
 
-Vấn đề  ở đây là gì ? Nếu như trang web với 10000 user truy cập cùng lúc, chuyện gì sẽ xảy ra?
+Vấn đề ở đây là gì ? Nếu như trang web với 10000 user truy cập cùng lúc, chuyện gì sẽ xảy ra?
 
 - Vấn đề  đầu tiên sẽ gặp phải sẽ là trang web sẽ load chậm, tương tác có độ trễ  lớn hay tệ hơn là crash hoàn toàn trang web. 
 - Nguyên nhân là khi có nhiều người như vậy truy cập như vậy, website sẽ yêu cầu server nhiều tác vụ, bao gồm tác vụ truy cập database để  lấy nội dung bài blog, yêu cầu đến truy cập trang web con, yêu cầu business logic khác, ...

@@ -1,5 +1,5 @@
 ---
-title: Make REST API more RESTful
+title: Making REST API more RESTful
 subtitle: A Handbook for Building RESTful API
 date: 2023-08-07T09:46:45+07:00
 tags: ["software-development", "blog", "rest-api", "EN"]
@@ -175,7 +175,7 @@ You can store this type of data inside your cache and serve it from there instea
 
 Here are a few important things to consider when using a cache:
 
-* Always ensure that the data stored in the cache is up-to-date to avoid serving stale and outdated information.
+* Ensure that the data stored in the cache is up-to-date to avoid serving stale and outdated information.
 
 * When the cache is being filled during the processing of the first request and subsequent requests come in, we need a mechanism to decide whether to delay those requests and serve data from the cache or provide data directly from the database like the first request.
 
