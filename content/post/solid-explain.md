@@ -53,12 +53,26 @@ Adhering to Single Responsibility Principle, we should split this class into 3 s
 
 Similar to we don't need to open the engine of a car to change its tire, once a software component is designed and implemented, we should avoid altering it to add new features or behaviors. Instead, new functionalities should be achieved by creating new classes or modules that extend the existing ones.
 
-This approach promotes code reusability, reducing the risk of introducing unintended side effects when modifying existing code, and enhances the overall stability of the software system. Developers can easily extend the capabilities of their software while maintaining the integrity of the existing codebase.
+This approach promotes code reusability, reducing the risk of introducing unintended side effects when modifying existing code, and enhances the overall stability of the software system as developers can extend the capabilities of their software while maintaining the integrity of the existing codebase.
 
 ## Liskov Substitution Principle (LSP)
 
+> "Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program."
+
+Proposed by Barbara Liskov, this principle emphasizes the need for strong adherence to the "is-a" relationship between classes.
+Here's an example illustrating a violation of the Liskov Substitution Principle (LSP) using a different scenario involving doors and their behavior: 
+
+Suppose you have a base class `Door` with a method `open()` that open the door, regradless of condition. 
+
+You can write derived classes, such as `PushDoor` and `SlidingDoor`, which inherit from `Door`. However, if you write a `AutomaticDoor` class inherits from `Door` class, which requires electricity to open, then this class would be a violation of this principle since the expectated behavior of the method `open()` is not the same between `AutomaticDoor` and `Door`.  
+
+
 ## Interface Segregation Principle (ISP)
 
+> "Having multiple smaller and specific interfaces, each with their separate use-case, instead of coupling them into a big interface with unnecessary obligations."
+
 ## Dependency Inversion Principle (DIP)
+
+> ""
 
 
