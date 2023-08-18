@@ -66,13 +66,22 @@ Suppose you have a base class `Door` with a method `open()` that open the door, 
 
 You can write derived classes, such as `PushDoor` and `SlidingDoor`, which inherit from `Door`. However, if you write a `AutomaticDoor` class inherits from `Door` class, which requires electricity to open, then this class would be a violation of this principle since the expectated behavior of the method `open()` is not the same between `AutomaticDoor` and `Door`.  
 
-
 ## Interface Segregation Principle (ISP)
 
 > "Having multiple smaller and specific interfaces, each with their separate use-case, instead of coupling them into a big interface with unnecessary obligations."
 
+This principle advises creating interfaces tailored to the specific needs of implementing classes, preventing the imposition of unnecessary implememtation. Splitting into each interface for implementation of certain classses that similar to each other, leading to clear and coherent implementation of new classes and maintainment of old classes thanks to enhanced modularity and reduced dependencies between components.
+
 ## Dependency Inversion Principle (DIP)
 
-> ""
+> "High-level modules in software should not depend on low-level modules; Instead, both should depend on abstractions"
 
+Specifically, interfaces should not depend on detailed implementations, implementations should depend on interfaces. Let's explain this principle through an example.
 
+Electrical appliances use electricity from eletric sockets, which get electricity from a electricity source. The appliances don't care about which electricity source they are using from, they just know the socket supports which voltage level and plug in. The case is the same for the electricity source. In this example, the electric socket is the interface. We can swap the appliances and as long as they support the voltage, the appliances will work correctly, without concern on how the appliance will use the electricity.
+
+A common example of this in coding is implementations of database. By creating an interface IDatabase with generic methods that every Database has like Get, Create, Delete functions ...., when we need to change the database, we don't need to change the implementation of module that using the Database, we just need to change the implementation of the Database object that implements from the IDatabase interface.
+
+## Wrapping thing up
+
+I hope that my explanation has helped you understand the nuance of SOLID principle. It might sounds like SOLID is the end all be all for OOP Programming but there are various case of exceptions of this. It all depend on the what and the how of your project, SOLID are just a set of guidelines that many people find it to gracefully accommodate change, and stand the test of time. Find what suits you and your team the best, cater to your team's strength and empowers your ability to shape your product with clarity, coherence and confidence .
