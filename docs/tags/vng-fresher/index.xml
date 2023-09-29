@@ -8,11 +8,11 @@
     <language>en</language>
     <managingEditor>npthinh26012@gmail.com (NPT)</managingEditor>
     <webMaster>npthinh26012@gmail.com (NPT)</webMaster>
-    <lastBuildDate>Wed, 11 May 2022 16:34:49 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/vng-fresher/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 May 2022 16:34:49 +0700</lastBuildDate><atom:link href="https://Noknight41.github.io/tags/vng-fresher/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Starter to System Design</title>
       <link>https://Noknight41.github.io/post/sysdes/</link>
-      <pubDate>Wed, 11 May 2022 16:34:49 +0700</pubDate>
+      <pubDate>Fri, 13 May 2022 16:34:49 +0700</pubDate>
       <author>npthinh26012@gmail.com (NPT)</author>
       <guid>https://Noknight41.github.io/post/sysdes/</guid>
       <description>&lt;p&gt;Imagine you have to design a system for serving blogs to massive readers (10k tps). How would you design the system?&lt;/p&gt;</description>
